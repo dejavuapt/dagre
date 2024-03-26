@@ -40,14 +40,16 @@ console.log(g.hasNode("a"));
 var gd = new graphlib.Graph({directed: true}).setGraph({rankdir:"LR"});
 gd.setDefaultEdgeLabel(function(){ return {width:50};});
 // оно реверсится... из-за LR, width = height, height = width.
-gd.setNode("1", {label: "Su", width: 1000, height: 0, in: 2, out: 4}); // название портов всегда есть
-gd.setNode("2", {label: "I1", width: 30, height: 0});
-gd.setNode("3", {label: "I2", width: 30, height: 0});
-gd.setNode("4", {label: "R", width: 30, height: 40});
-gd.setNode("5", {label: "D", width: 30, height: 40});
+gd.setNode("1", {label: "Su", width: 30, height: 50, in: 0, out: 4}); // название портов всегда есть
+gd.setNode("2", {label: "I1", width: 30, height: 50, in: 1, out: 2});
+gd.setNode("3", {label: "I2", width: 30, height: 50, in: 1, out: 2});
+gd.setNode("4", {label: "R", width: 30, height: 50, in: 2, out: 0});
+gd.setNode("5", {label: "D", width: 30, height: 50, in: 2, out: 0});
+gd.setNode("6", {label: "Te", width: 30, height: 50, in: 1, out: 0});
 
-gd.setEdge("1", "2");
+gd.setEdge("1", "6");
 gd.setEdge("1", "3");
+gd.setEdge("1", "2");
 gd.setEdge("3", "4");
 gd.setEdge("2", "4");
 gd.setEdge("3", "5");
