@@ -47,14 +47,14 @@ gd.setNode("4", {label: "R", width: 30, height: 50, in: 2, out: 0});
 gd.setNode("5", {label: "D", width: 30, height: 50, in: 2, out: 0});
 gd.setNode("6", {label: "Te", width: 30, height: 50, in: 1, out: 0});
 
-gd.setEdge("1", "6");
-gd.setEdge("1", "3");
 gd.setEdge("1", "2");
+gd.setEdge("1", "3");
+gd.setEdge("2", "5");
 gd.setEdge("3", "4");
-gd.setEdge("2", "4");
+gd.setEdge("3", "6");
 gd.setEdge("3", "5");
-gd.setEdge("1", "5");
-gd.setEdge("2", "1");
+gd.setEdge("4", "5");
+gd.setEdge("4", "6");
 
 console.log({edges: gd.edges()})
 
