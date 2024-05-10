@@ -24,7 +24,8 @@
     "layout"
   ],
   "dependencies": {
-    "@dagrejs/graphlib": "^2.2.1"
+    "@dagrejs/graphlib": "^2.2.1",
+    "@svgdotjs/svg.js": "^3.2.0"
   },
   "devDependencies": {
     "benchmark": "2.1.4",
